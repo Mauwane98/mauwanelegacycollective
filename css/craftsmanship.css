@@ -1,0 +1,536 @@
+/* Craftsmanship Page Specific Styles */
+.craftsmanship-page {
+    --craft-primary: #3a2e26;
+    --craft-secondary: #d4a373;
+    --craft-light: #f8f1e9;
+    --craft-dark: #1e1a17;
+}
+
+/* Craftsmanship Header */
+.craftsmanship-header {
+    background-color: rgba(255, 255, 255, 0.98);
+    border-bottom: 1px solid rgba(58, 46, 38, 0.1);
+}
+
+/* Craftsmanship Hero */
+.craftsmanship-hero {
+    height: 90vh;
+    min-height: 700px;
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), 
+                url('../assets/images/craftsmanship-hero.jpg') center/cover;
+    display: flex;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.craftsmanship-hero .hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    max-width: 800px;
+}
+
+.craftsmanship-hero h1 {
+    font-size: clamp(3.5rem, 7vw, 6rem);
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+}
+
+.craftsmanship-hero .subtitle {
+    font-size: 1.3rem;
+    opacity: 0.9;
+    max-width: 500px;
+}
+
+.hero-scroll {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    animation: bounce 2s infinite;
+}
+
+.hero-scroll svg {
+    width: 24px;
+    height: 24px;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0) translateX(-50%);
+    }
+    40% {
+        transform: translateY(-20px) translateX(-50%);
+    }
+    60% {
+        transform: translateY(-10px) translateX(-50%);
+    }
+}
+
+/* Craftsmanship Intro */
+.craftsmanship-intro {
+    padding: 5rem 0;
+    background-color: white;
+}
+
+.intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.intro-text h2 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    color: var(--craft-primary);
+    margin-bottom: 1.5rem;
+}
+
+.intro-text p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.intro-image {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.intro-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.intro-image:hover img {
+    transform: scale(1.03);
+}
+
+/* Process Section */
+.process-section {
+    padding: 5rem 0;
+    background-color: var(--craft-light);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--craft-primary);
+    margin-bottom: 1rem;
+}
+
+.section-subtitle {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 3rem;
+    color: var(--craft-dark);
+    opacity: 0.8;
+}
+
+.process-steps {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.process-step {
+    display: grid;
+    grid-template-columns: 80px 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 5rem;
+}
+
+.process-step:last-child {
+    margin-bottom: 0;
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    background-color: var(--craft-secondary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.step-content h3 {
+    font-size: 1.5rem;
+    color: var(--craft-primary);
+    margin-bottom: 1rem;
+}
+
+.step-content p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--craft-dark);
+}
+
+.step-image {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.step-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.process-step:hover .step-image img {
+    transform: scale(1.05);
+}
+
+/* Techniques Section */
+.techniques-section {
+    padding: 5rem 0;
+    background-color: white;
+}
+
+.techniques-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.technique-card {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--craft-light);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.technique-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.technique-icon {
+    margin-bottom: 1.5rem;
+}
+
+.technique-card h3 {
+    color: var(--craft-primary);
+    margin-bottom: 1rem;
+}
+
+.technique-card p {
+    font-size: 0.95rem;
+    color: var(--craft-dark);
+    opacity: 0.8;
+}
+
+/* Artisan Spotlight */
+.artisan-section {
+    padding: 5rem 0;
+    background-color: var(--craft-light);
+}
+
+.artisan-slider {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.artisan-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.artisan-image {
+    height: 100%;
+}
+
+.artisan-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.artisan-content {
+    padding: 3rem;
+}
+
+.artisan-content h3 {
+    font-size: 1.8rem;
+    color: var(--craft-primary);
+    margin-bottom: 0.5rem;
+}
+
+.title {
+    font-weight: 600;
+    color: var(--craft-secondary);
+    margin-bottom: 0.5rem;
+}
+
+.experience {
+    font-size: 0.9rem;
+    color: var(--craft-dark);
+    opacity: 0.8;
+    margin-bottom: 1.5rem;
+}
+
+.artisan-content p {
+    font-style: italic;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.artisan-content p::before,
+.artisan-content p::after {
+    color: var(--craft-secondary);
+    font-size: 2rem;
+    line-height: 1;
+    position: absolute;
+}
+
+.artisan-content p::before {
+    content: '"';
+    top: -1rem;
+    left: -1rem;
+}
+
+.artisan-content p::after {
+    content: '"';
+    bottom: -2rem;
+    right: -1rem;
+}
+
+.signature {
+    margin-top: 2rem;
+}
+
+/* Sustainability Section */
+.sustainability-section {
+    padding: 5rem 0;
+    background-color: white;
+}
+
+.sustainability-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.sustainability-content h2 {
+    font-size: 2.5rem;
+    color: var(--craft-primary);
+    margin-bottom: 1.5rem;
+}
+
+.sustainability-content p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+.sustainability-list {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.sustainability-list li {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+.sustainability-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    width: 12px;
+    height: 12px;
+    background-color: var(--craft-secondary);
+    border-radius: 50%;
+}
+
+.btn-outline {
+    border-color: var(--craft-primary);
+    color: var(--craft-primary);
+}
+
+.btn-outline:hover {
+    background-color: var(--craft-primary);
+    color: white;
+}
+
+.sustainability-image {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.sustainability-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Craftsmanship Footer */
+.craftsmanship-footer {
+    background-color: var(--craft-primary);
+    color: white;
+    padding: 4rem 0 2rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.footer-brand img {
+    margin-bottom: 1rem;
+}
+
+.footer-brand p {
+    opacity: 0.8;
+    line-height: 1.7;
+}
+
+.footer-links h3 {
+    color: var(--craft-secondary);
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.footer-links a:hover {
+    opacity: 1;
+}
+
+.footer-contact h3 {
+    color: var(--craft-secondary);
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.footer-contact p {
+    margin-bottom: 1rem;
+    opacity: 0.8;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+.legal-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.legal-links a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .process-step {
+        grid-template-columns: 60px 1fr;
+        grid-template-rows: auto auto;
+    }
+    
+    .step-image {
+        grid-column: 1 / -1;
+        grid-row: 2;
+    }
+    
+    .sustainability-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .artisan-card {
+        grid-template-columns: 1fr;
+    }
+    
+    .artisan-image {
+        height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .intro-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .craftsmanship-hero {
+        height: 80vh;
+        min-height: 600px;
+    }
+    
+    .craftsmanship-hero h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .process-step {
+        gap: 1.5rem;
+        margin-bottom: 3rem;
+    }
+    
+    .artisan-content {
+        padding: 2rem;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+    
+    .legal-links {
+        justify-content: center;
+    }
+}

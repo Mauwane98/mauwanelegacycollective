@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en-ZA" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Mauwane Legacy Collective</title>
+    <meta name="description" content="Get in touch with Mauwane Legacy Collective for inquiries about our brands, products, or craftsmanship">
+
+     <!-- Core CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/utilities.css">
+    <link rel="stylesheet" href="css/animations.css">
+    
+    <!-- Page-specific CSS -->
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/mosse-luxe.css">
+
+    <link rel="preconnect" href="https://maps.googleapis.com">
+</head>
+<body class="contact-page">
+    <!-- Contact Header -->
+    <header class="main-header">
+        <div class="container">
+          <nav class="navbar">
+            <!-- Logo -->
+            <a href="index.html" class="logo-link">
+              <img src="assets/images/MLC-LOGO.png" alt="Mauwane Legacy Collective" width="120" height="40" class="logo">
+            </a>
+      
+            <!-- Desktop Menu -->
+            <ul class="nav-menu">
+              <li><a href="about.html" class="nav-link">Our Story</a></li>
+              <li><a href="craftsmanship.html" class="nav-link">Craftsmanship</a></li>
+              <li class="dropdown">
+                <button class="dropdown-toggle" aria-expanded="false">
+                  Our Brands <span class="dropdown-arrow">⌄</span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a href="brands/mosse-luxe.html" class="dropdown-link">Mossé Luxe</a></li>
+                  <li><a href="brands/lsg-creations.html" class="dropdown-link">LSG Creations</a></li>
+                </ul>
+              </li>
+              <li><a href="contact.html" class="nav-link cta-link">Contact</a></li>
+            </ul>
+      
+            <!-- Mobile Toggle -->
+            <button class="mobile-nav-toggle" aria-label="Menu" aria-expanded="false">
+              <span class="hamburger"></span>
+            </button>
+          </nav>
+        </div>
+      </header>
+
+    <!-- Contact Hero -->
+    <section class="contact-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Let's Create Together</h1>
+                <p class="subtitle">Reach out for inquiries, collaborations, or to visit our Johannesburg workshop</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Methods -->
+    <section class="contact-methods">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <img src="assets/svg/email-icon.svg" alt="" width="48">
+                    </div>
+                    <h3>Email Us</h3>
+                    <p>General Inquiries</p>
+                    <a href="mailto:hello@mauwanelegacy.com" class="contact-link">hello@mauwanelegacy.com</a>
+                    <p>Brand Specific</p>
+                    <a href="mailto:orders@mosseluxe.co.za" class="contact-link">orders@mosseluxe.co.za</a>
+                    <a href="mailto:schools@lsgcreations.co.za" class="contact-link">schools@lsgcreations.co.za</a>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <img src="assets/svg/phone-icon.svg" alt="" width="48">
+                    </div>
+                    <h3>Call Us</h3>
+                    <p>Main Office</p>
+                    <a href="tel:+27111234567" class="contact-link">+27 11 123 4567</a>
+                    <p>Business Hours</p>
+                    <p class="hours">Mon-Fri: 8:30am - 5:00pm<br>Sat: 9:00am - 1:00pm</p>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <img src="assets/svg/map-icon.svg" alt="" width="48">
+                    </div>
+                    <h3>Visit Us</h3>
+                    <p>Workshop Address</p>
+                    <address>
+                        14 Craft Avenue<br>
+                        Artisan District<br>
+                        Johannesburg, 2001<br>
+                        South Africa
+                    </address>
+                    <a href="#map" class="btn btn-outline">View Map</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="form-grid">
+                <div class="form-content">
+                    <h2>Send Us a Message</h2>
+                    <p>Have questions about our products or process? Want to discuss a custom order? Fill out the form and we'll respond within 48 hours.</p>
+                    <div class="form-info">
+                        <h3>What to Include:</h3>
+                        <ul>
+                            <li>Your specific inquiry or request</li>
+                            <li>Product names if applicable</li>
+                            <li>Timeline for your project</li>
+                            <li>Preferred contact method</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="form-container">
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Full Name*</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email*</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <select id="subject" name="subject">
+                                <option value="">Select an option</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="mosse">Mossé Luxe Products</option>
+                                <option value="lsg">LSG Creations Products</option>
+                                <option value="custom">Custom Order</option>
+                                <option value="wholesale">Wholesale Inquiry</option>
+                                <option value="press">Press/Media</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message*</label>
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                        </div>
+                        <div class="form-footer">
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                            <p class="form-note">* Required fields</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section id="map" class="map-section">
+        <div class="container">
+            <h2 class="section-title">Find Our Workshop</h2>
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3580.138784714082!2d28.03540731502845!3d-26.19398398344288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950c1b6e36a5a1%3A0x9a9a9a9a9a9a9a9a!2sArtisan%20District%2C%20Johannesburg!5e0!3m2!1sen!2sza!4v1234567890123!5m2!1sen!2sza" 
+                    width="600" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+                <div class="map-overlay">
+                    <div class="overlay-content">
+                        <h3>Workshop Hours</h3>
+                        <p>By appointment only</p>
+                        <p>Mon-Fri: 9am - 4pm</p>
+                        <a href="mailto:visits@mauwanelegacy.com" class="btn btn-outline">Schedule a Visit</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            
+            <div class="faq-grid">
+                <div class="faq-card">
+                    <button class="faq-question">
+                        <span>How long does a custom order take to complete?</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Custom orders typically take 4-6 weeks from design approval to completion, depending on complexity. Leather goods may require additional time for proper curing and finishing.</p>
+                    </div>
+                </div>
+                
+                <!-- Additional FAQ items would go here -->
+            </div>
+            
+            <div class="faq-cta">
+                <p>Don't see your question here?</p>
+                <a href="#contactForm" class="btn btn-primary">Ask Us Directly</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Footer -->
+    <footer class="contact-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="assets/images/MLC-LOGO.png" alt="MLC Logo" width="150">
+                    <p>Handcrafted excellence from South Africa</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">Our Story</a></li>
+                        <li><a href="brands/mosse-luxe.html">Our Brands</a></li>
+                        <li><a href="craftsmanship.html">Craftsmanship</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Connect With Us</h3>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram">
+                            <img src="assets/svg/instagram-icon.svg" alt="Instagram" width="24">
+                        </a>
+                        <a href="#" aria-label="Facebook">
+                            <img src="assets/svg/facebook-icon.svg" alt="Facebook" width="24">
+                        </a>
+                        <a href="#" aria-label="Pinterest">
+                            <img src="assets/svg/pinterest-icon.svg" alt="Pinterest" width="24">
+                        </a>
+                    </div>
+                    <div class="newsletter">
+                        <h4>Subscribe to Our Newsletter</h4>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Your email address">
+                            <button type="submit">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Mauwane Legacy Collective. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+</body>
+</html>

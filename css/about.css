@@ -1,0 +1,91 @@
+/* ABOUT PAGE SPECIFIC STYLES */
+/* Reuses variables from main.css */
+
+/* Hero Section */
+.about-hero {
+    padding: var(--space-xxl) 0;
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(6, 6, 6, 0.8)), 
+                url('../assets/images/mosse-luxe-product.jpeg') center/cover no-repeat;
+}
+
+/* Founder Section */
+.founder-image img {
+    max-width: 85%; /* Make it smaller but not too small */
+    margin: 0 auto;
+    display: block;
+    border-radius: 1.5rem;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    transform: rotate(-1.5deg);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.founder-image img:hover {
+    transform: rotate(0deg) scale(1.02);
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.25);
+}
+
+
+
+/* Timeline */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-left: var(--space-lg);
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 30px;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: var(--color-secondary);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: var(--space-xl);
+    padding-left: var(--space-lg);
+}
+
+.timeline-date {
+    position: absolute;
+    left: -70px;
+    top: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: var(--fw-bold);
+}
+
+/* Team Section */
+.team-member img {
+    width: 180px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%; /* This creates the oval shape */
+    display: block;
+    margin: 0 auto 1rem auto; /* Center the image */
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .founder-story .grid--2 {
+        grid-template-columns: 1fr;
+    }
+    .timeline::before {
+        left: 20px;
+    }
+    .timeline-date {
+        left: -50px;
+        width: 40px;
+        height: 40px;
+        font-size: 0.9rem;
+    }
+}
