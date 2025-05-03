@@ -6,35 +6,33 @@
     padding: var(--space-xxl) 0;
     background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(6, 6, 6, 0.8)), 
                 url('../assets/images/mosse-luxe-product.jpeg') center/cover no-repeat;
-}
-
-/* Founder Section */
-.founder-image img {
-    max-width: 85%; /* Make it smaller but not too small */
+  }
+  
+  /* Founder Section */
+  .founder-image img {
+    max-width: 85%;
     margin: 0 auto;
     display: block;
     border-radius: 1.5rem;
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
     transform: rotate(-1.5deg);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.founder-image img:hover {
+  }
+  
+  .founder-image img:hover {
     transform: rotate(0deg) scale(1.02);
     box-shadow: 0 16px 30px rgba(0, 0, 0, 0.25);
-}
-
-
-
-/* Timeline */
-.timeline {
+  }
+  
+  /* Timeline */
+  .timeline {
     position: relative;
     max-width: 800px;
     margin: 0 auto;
     padding-left: var(--space-lg);
-}
-
-.timeline::before {
+  }
+  
+  .timeline::before {
     content: '';
     position: absolute;
     left: 30px;
@@ -42,15 +40,15 @@
     bottom: 0;
     width: 4px;
     background: var(--color-secondary);
-}
-
-.timeline-item {
+  }
+  
+  .timeline-item {
     position: relative;
     margin-bottom: var(--space-xl);
     padding-left: var(--space-lg);
-}
-
-.timeline-date {
+  }
+  
+  .timeline-date {
     position: absolute;
     left: -70px;
     top: 0;
@@ -61,31 +59,162 @@
     align-items: center;
     justify-content: center;
     font-weight: var(--fw-bold);
-}
-
-/* Team Section */
-.team-member img {
+  }
+  
+  /* Team Section */
+  .team-member img {
     width: 180px;
     height: 220px;
     object-fit: cover;
-    border-radius: 50%; /* This creates the oval shape */
+    border-radius: 50%;
     display: block;
-    margin: 0 auto 1rem auto; /* Center the image */
-}
-
-
-/* Responsive */
-@media (max-width: 768px) {
-    .founder-story .grid--2 {
-        grid-template-columns: 1fr;
+    margin: 0 auto 1rem auto;
+  }
+  
+  /* Collective Vision Section */
+  .collective-vision {
+    background-color: #1C1F26;
+    color: #ffffff;
+    padding: 4rem 1rem;
+  }
+  
+  .collective-vision h2 {
+    text-align: center;
+    color: #D4A373;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  .collective-vision p {
+    text-align: center;
+    font-size: 1.125rem;
+    margin-bottom: 3rem;
+    line-height: 1.8;
+  }
+  
+  .collective-vision .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .collective-vision h3 {
+    color: #D4A373;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+  
+  .collective-vision .grid p {
+    text-align: left;
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+  
+  .collective-vision a {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    border: 2px solid #D4A373;
+    color: #D4A373;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+  }
+  
+  .collective-vision a:hover {
+    background-color: #D4A373;
+    color: #1C1F26;
+  }
+  
+  /* Base Responsive Grid & Layout Helpers */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin-inline: auto;
+    padding: 0 1rem;
+  }
+  
+  .grid {
+    display: grid;
+    gap: 2rem;
+  }
+  
+  .grid--2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .grid--2,
+    .collective-vision .grid {
+      grid-template-columns: 1fr;
     }
+  
     .timeline::before {
-        left: 20px;
+      left: 20px;
     }
+  
     .timeline-date {
-        left: -50px;
-        width: 40px;
-        height: 40px;
-        font-size: 0.9rem;
+      left: -50px;
+      width: 40px;
+      height: 40px;
+      font-size: 0.9rem;
     }
-}
+  
+    .timeline .timeline-content {
+      margin-left: 0 !important;
+    }
+  
+    .timeline .timeline-date {
+      width: auto !important;
+      display: inline-block;
+      margin-bottom: 1rem;
+    }
+  
+    .timeline-item {
+      margin-bottom: 2rem !important;
+    }
+  
+    .founder-story .founder-image {
+      margin-top: 2rem;
+    }
+  
+    .founder-story .grid--2 {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  
+    .collective-vision h2 {
+      font-size: 2rem;
+    }
+  
+    .collective-vision p {
+      font-size: 1rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+  
+    .collective-vision .grid p,
+    .collective-vision h3 {
+      text-align: center;
+    }
+  
+    .collective-vision a {
+      display: block;
+      margin: 1.5rem auto 0;
+      text-align: center;
+    }
+  }
+  
